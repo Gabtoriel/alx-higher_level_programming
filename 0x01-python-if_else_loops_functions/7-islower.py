@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-# program to check if a letter is in lowercase
 def islower(c):
-    letter_index = ord(c)
-    if letter_index >= 97 and letter_index <= 122:
+    number = ord(c)
+    if number in range(97, 123):
         return True
-    else:
-        return False
+    return False

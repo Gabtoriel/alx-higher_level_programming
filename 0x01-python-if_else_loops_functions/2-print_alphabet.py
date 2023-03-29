@@ -1,4 +1,5 @@
 #!/usr/bin/python3
-# print the letters of the alphabet from a - z
-for char in range(97, 123):
-    print(chr(char), end="")
+for i in range(97, 123):
+    tableAsciiToAlphabet = chr(i)
+    asciiToAlpha = "" + tableAsciiToAlphabet
+    print("{}".format(asciiToAlpha), end='')
