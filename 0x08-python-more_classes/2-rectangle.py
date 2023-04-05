@@ -26,7 +26,7 @@ class Rectangle:
 
         """Sets the width of the rectangle object."""
 
-        if isinstance(value, int):
+        if not (isinstance(value, int)):
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
@@ -44,11 +44,23 @@ class Rectangle:
 
         """Sets the height of the rectangle."""
 
-        if isinstance(value, int):
+        if not (isinstance(value, int)):
             raise TypeError("height must be integer")
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+
+        """Calculates the area of a rectangle."""
+
+        return self.height * self.width
+
+    def perimeter(self):
+
+        """Calculates the perimeter of the rectangle"""
+
+        return 2 * (self.height + self.width)
 
 
 if __name__ == "__main__":
@@ -57,7 +69,5 @@ if __name__ == "__main__":
     print(a.width)
     a.height = 5
     a.width = 10
-    a.height = 10.5
-    a.width = 5.5
-    a.height = -10
-    a.width = -5
+    print(a.area())
+    print(a.perimeter())
