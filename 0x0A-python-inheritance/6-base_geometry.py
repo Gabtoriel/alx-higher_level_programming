@@ -17,6 +17,6 @@ class BaseGeometry:
 if __name__ == "__main__":
     a = BaseGeometry()
     try:
-       print(a.area())
+        print(a.area())
     except Exception as e:
         print("[{}] {}".format(e.__class__.__name__, e))
