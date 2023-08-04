@@ -1,0 +1,27 @@
+#######################################
+## Testing of the say_my_name module ##
+#######################################
+
+The say my name program gets the first and last name of a user
+and then prints it in sentence.
+::
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name('hi', 'git')
+    My name is hi git
+
+Accepts empty strings as input but there will be space in the strings
+being printed
+::
+    >>> say_my_name('', 'git')
+    My name is  git
+
+Error if the parameters aren't strings
+::
+    >>> say_my_name(True, 'git')
+    Traceback (most recent call last):
+      ...
+    TypeError: first_name must be a string
+    >>> say_my_name('van', 3)
+    Traceback (most recent call last):
+      ...
+    TypeError: last_name must be a string

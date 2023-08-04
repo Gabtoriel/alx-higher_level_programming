@@ -1,0 +1,41 @@
+====================================
+Testing of the add integer function|
+====================================
+
+The add integer function takes two integers and returns there sum
+::
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(1, 2)
+    3
+    >>> add_integer(17, 5)
+    22
+
+it also accepts float values but converts it to integers and returns int
+::
+    >>> add_integer(3.0, 3.0)
+    6
+    >>> add_integer(17.0, 5)
+    22
+
+it returns an error when a text or boolean value is passed
+::
+    >>> add_integer(True, False)
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+      File "/home/viclins_t/alx-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 16, in add_integer
+        raise TypeError("a must be an integer")
+     TypeError: a must be an integer
+    >>> add_integer('a', 3.0)
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+      File "/home/viclins_t/alx-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 16, in add_integer
+        raise TypeError("a must be an integer")
+    TypeError: a must be an integer
+    >>> add_integer(True, 3.0)
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+      File "/home/viclins_t/alx-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 16, in add_integer
+        raise TypeError("a must be an integer")
+    TypeError: a must be an integer
+
+Testing...
