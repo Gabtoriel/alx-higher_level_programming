@@ -1,0 +1,36 @@
+======================================
+Testing for the print square program =
+======================================
+
+:: The print square function takes in
+:: the sixe of a square and draws it on
+:: the screen.
+
+	>>> print_square = __import__("4-print_square").print_square
+	>>> print_square(5)
+	#####
+	#####
+	#####
+	#####
+	#####
+	>>> print_square(1)
+	#
+	>>> print_square(4)
+	####
+	####
+	####
+	####
+
+:: length of the square must be an integer
+
+	>>> print_square(5.0)
+	Traceback (most recent call last):
+	  ...
+	TypeError: size must be an integer
+
+:: The length cannot be less than Zero
+
+	>>> print_square(-2)
+	Traceback (most recent call last):
+	  ...
+	ValueError: size must be >= 0
