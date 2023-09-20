@@ -6,6 +6,7 @@
 
 import json
 
+
 def load_from_json_file(filename):
 
     """Accepts a json file as input and then converts the json
