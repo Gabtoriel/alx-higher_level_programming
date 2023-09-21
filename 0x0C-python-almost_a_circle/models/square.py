@@ -23,23 +23,23 @@ class Square(Rectangle):
 
         """Returns the informal string format of the rectangle object."""
 
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.__x, self.__y,
-                                                 self.__width)
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
+                                                 self.width)
 
     @property
     def size(self):
 
         """Gets the size of the square."""
 
-        return self.__width
+        return self.width
 
     @size.setter
     def size(self, size):
 
         """Sets the width and height of the square object."""
 
-        self.__width = size
-        self.__height = size
+        self.width = size
+        self.height = size
 
     def update(self, *args, **kwargs):
 
@@ -50,21 +50,28 @@ class Square(Rectangle):
             if args[0]:
                 self.id = args[0]
             if args[1]:
-                self.__width = args[1]
-                self.__height = args[1]
+                self.width = args[1]
+                self.height = args[1]
             if args[3]:
-                self.__x = args[2]
+                self.x = args[2]
             if args[4]:
-                self.__y = args[3]
+                self.y = args[3]
         else:
             if kwargs is not None and kwargs != {}:
                 for key in kwargs:
                     if key == "id":
                         self.id = kwargs[key]
                     if key == "size":
-                        self.__width = kwargs[key]
-                        self.__height = kwargs[key]
+                        self.width = kwargs[key]
+                        self.height = kwargs[key]
                     if key == "x":
-                        self.__x = kwargs[key]
+                        self.x = kwargs[key]
                     if key == "y":
-                        self.__y = kwargs[key]
+                        self.y = kwargs[key]
+
+    def to_dictionary(self):
+
+        """Instance method to return the dict representation of a square
+        instance."""
+
+        return dict(id=self.id, size=self.width, x=self.__x, y=self.__y)
