@@ -113,7 +113,7 @@ class Rectangle(Base):
 
         """Routine to calculate the area of a rectangle."""
 
-        return (self.__width * self.__length)
+        return self.__width * self.__height
 
     def display(self):
 
